@@ -22,6 +22,7 @@ const views = join(__dirname, '..', 'views');
 /*Finally, configure nunjucks, setting views and express
 declared above*/
 nunjucks.configure(views, { express });
+//make the static folder available for app use
 //start the application
 await app.listen(3000);
 }
