@@ -29,4 +29,8 @@ export class UsersController {
   remove(@Param('id') id: string) {
     return this.usersService.remove(+id);
   }
+  @Get('create')
+  @Render('users/create-user.html')
+  createForm() {
+  }
 }
