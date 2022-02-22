@@ -12,6 +12,10 @@ export class UsersController {
   create(@Body() createUserDto: CreateUserDto) {
     return this.usersService.create(createUserDto);
   }
+  @Get('create')
+  @Render('users/create-user.html')
+  createForm() {
+  }
   @Get()
   findAll() {
     return this.usersService.findAll();
@@ -29,8 +33,5 @@ export class UsersController {
   remove(@Param('id') id: string) {
     return this.usersService.remove(+id);
   }
-  @Get('create')
-  @Render('users/create-user.html')
-  createForm() {
-  }
+
 }
